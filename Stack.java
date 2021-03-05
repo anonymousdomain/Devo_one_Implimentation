@@ -20,6 +20,9 @@ public int peek(){
     data=stack[top-1];
     return data;
 }
+public int size(){
+    return top;
+}
   public void show() {
     for (int n : stack) {
       System.out.print(n + " ");

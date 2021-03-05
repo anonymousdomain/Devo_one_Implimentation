@@ -4,7 +4,7 @@ public class runnur {
        list.push(5);
        list.push(10);
        list.push(20);
-       System.out.println(list.peek());
+       System.out.println("pekk the value from the top "+list.peek());
        System.out.println("deleted value is : "+list.pop());
        
        list.show();
