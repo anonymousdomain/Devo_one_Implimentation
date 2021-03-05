@@ -1,7 +1,7 @@
 public class Stack {
   int stack[]=new int[5];
   int top=0;
-public void push(int i){
+public void push(int data){
     stack[0]=data;
     top++;
 

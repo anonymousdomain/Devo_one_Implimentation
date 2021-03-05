@@ -3,5 +3,6 @@ public class runnur {
        Stack list=new Stack();
        list.push(5);
        list.push(10);
+       list.show();
    } 
 }
