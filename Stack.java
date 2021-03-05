@@ -15,7 +15,11 @@ public class Stack {
     stack[top] = 0; //delete the value from the top
     return data;
   }
-
+public int peek(){
+    int data;
+    data=stack[top-1];
+    return data;
+}
   public void show() {
     for (int n : stack) {
       System.out.print(n + " ");
