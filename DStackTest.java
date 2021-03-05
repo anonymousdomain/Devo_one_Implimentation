@@ -8,7 +8,8 @@ public class DStackTest {
     dlist.push(25);
     dlist.push(30);
     dlist.show();
-    
+    //peek
+    System.out.println(dlist.peek());
     // pop
     dlist.pop();
     dlist.pop();
