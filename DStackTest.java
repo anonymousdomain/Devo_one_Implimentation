@@ -8,5 +8,12 @@ public class DStackTest {
     dlist.push(25);
     dlist.push(30);
     dlist.show();
+    
+    // pop
+    dlist.pop();
+    dlist.pop();
+    dlist.show();
+    dlist.pop();
+    dlist.show();
    } 
 }
