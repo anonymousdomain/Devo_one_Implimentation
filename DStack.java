@@ -29,7 +29,7 @@ public class DStack {
     return data;
   }
 
-  private void shrink() {
+  public void shrink() {
 int length=size();
 if(length<=arraySize/2)
 arraySize=arraySize/2;
