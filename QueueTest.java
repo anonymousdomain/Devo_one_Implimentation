@@ -7,9 +7,11 @@ public class QueueTest {
     qlist.enqueue(12);
     qlist.enqueue(20);
     qlist.enqueue(15);
+    qlist.enqueue(25);
     qlist.show();
     qlist.dequeue();
     qlist.dequeue();
+    System.out.println(qlist.getSize());
     qlist.show();
  }   
 }
