@@ -1,6 +1,6 @@
 public class DStack {
 
-  int arraySize = 3;
+  int arraySize =2;
   int stack[] = new int[arraySize];
   int top = 0;
 
@@ -9,6 +9,7 @@ public class DStack {
 
     stack[top] = data;
     top++;
+   
   }
 
   public void expandArray() {
@@ -16,7 +17,8 @@ public class DStack {
     int newStack[] = new int[arraySize * 2];
     System.arraycopy(stack, 0, newStack, 0, length);
     stack = newStack;
-    arraySize = arraySize * 2;
+    arraySize+=2;
+    
   }
 
   public int pop() {
@@ -31,12 +33,13 @@ public class DStack {
 
   public void shrink() {
 int length=size();
-if(length<=arraySize/2)
+if( (length<=(arraySize/2)/2))
+{
 arraySize=arraySize/2;
 int newStack[]= new int[arraySize];
 System.arraycopy(stack, 0, newStack, 0, length);
 stack=newStack;
-
+}
 }
 
 public int peek() {
@@ -46,7 +49,7 @@ public int peek() {
   }
 
   public int size() {
-    return top;
+    return arraySize;
   }
 
   public boolean isEmpty() {
