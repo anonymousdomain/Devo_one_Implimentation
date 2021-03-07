@@ -30,7 +30,7 @@ public class Queue {
        for(int n:queue){
            System.out.print(n+" ");
        }
-       
+       System.out.println();
     }
     public int getSize(){
         return size;
