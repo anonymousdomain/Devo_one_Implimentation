@@ -5,7 +5,10 @@ public class QueueTest {
     qlist.enqueue(5);
     qlist.enqueue(10);
     qlist.enqueue(12);
+    qlist.enqueue(20);
+    qlist.enqueue(15);
     qlist.show();
+    qlist.dequeue();
     qlist.dequeue();
     qlist.show();
  }   
