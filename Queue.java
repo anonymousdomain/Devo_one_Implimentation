@@ -14,11 +14,14 @@ public class Queue {
         size++;
     }
     public int dequeue(){
-        int data;
-        data=queue[front];
-        front=(front+1)%5;
-        size--;
-        d.shrink();
+        int data=0;
+        if(!isEmpty()){
+            data=queue[front];
+            front=(front+1)%5;
+            size--;
+            d.shrink();
+           
+        }else System.out.println("the Queue is empty");
         return data;
     }
     public void show(){
