@@ -1,20 +1,20 @@
 public class Queue {
 
-  int arrayS = 5;
+  int arSize = 5;
   int front;
   int rear;
   int size;
-  DStack d = new DStack();
-  int queue[] = new int[arrayS];
+  DStack obj = new DStack();
+  int queue[] = new int[arSize];
 
   public void enqueue(int data) {
-    if (getSize() == this.arrayS) {
-      d.expandArray();
+    if (getSize() == this.arSize) {
+      obj.expandArray();
       queue[rear] = data;
-      rear = (rear + 1) % this.arrayS;
+      rear = (rear + 1) % this.arSize;
     } else {
       queue[rear] = data;
-      rear = (rear + 1) % this.arrayS;
+      rear = (rear + 1) % this.arSize;
     }
 
     this.size++;
@@ -24,9 +24,9 @@ public class Queue {
     int data = 0;
     if (!isEmpty()) {
       data = queue[front];
-      front = (front + 1) % this.arrayS;
+      front = (front + 1) % this.arSize;
       this.size--;
-      d.shrink();
+      obj.shrink();
     } else System.out.println("the Queue is empty");
     return data;
   }
@@ -34,7 +34,7 @@ public class Queue {
   public void show() {
     System.out.print("elements:");
     for (int i = 0; i < this.size; i++) {
-      System.out.print(queue[(front + i) % this.arrayS] + " ");
+      System.out.print(queue[(front + i) % this.arSize] + " ");
     }
     System.out.println();
     for (int n : queue) {
