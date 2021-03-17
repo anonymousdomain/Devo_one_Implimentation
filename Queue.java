@@ -1,3 +1,11 @@
+/*
+data structure & algorithms  first assignment 
+
+Queue implimentation source code
+
+Name:Dawit Yitagesu
+ID:DBUR/0311/10
+*/
 public class Queue {
 
   int arrSize = 5;

@@ -1,3 +1,11 @@
+/*
+data structure & algorithms  first assignment 
+
+Dynamic Stack source code
+
+Name:Dawit Yitagesu
+ID:DBUR/0311/10
+*/
 public class DStack {
 
   int arrSize = 2;

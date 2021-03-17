@@ -1,3 +1,11 @@
+/*
+data structure & algorithms  first assignment 
+
+Dynamic Stack Test implimentation source code
+
+Name:Dawit Yitagesu
+ID:DBUR/0311/10
+*/
 public class DStackTest {
 
   public static void main(String[] args) {
