@@ -1,11 +1,11 @@
 public class DStack {
 
-  int arraySize = 2;
-  int stack[] = new int[arraySize];
+  int arrSize = 2;
+  int stack[] = new int[arrSize];
   int top = 0;
 
   public void push(int data) {
-    if (size() == arraySize) {
+    if (isFull()) {
       expandArray();
 
       stack[top] = data;
@@ -14,14 +14,6 @@ public class DStack {
       stack[top] = data;
       top++;
     }
-  }
-
-  public void expandArray() {
-    int length = size();
-    int newStack[] = new int[arraySize * 2];
-    System.arraycopy(stack, 0, newStack, 0, length);
-    stack = newStack;
-    arraySize += 2;
   }
 
   public int pop() {
@@ -38,24 +30,32 @@ public class DStack {
     return data;
   }
 
-  public void shrink() {
-    int length = size();
-    if ((length <= (arraySize / 2) / 2)) {
-      arraySize = arraySize / 2;
-      int newStack[] = new int[arraySize];
-      System.arraycopy(stack, 0, newStack, 0, length);
-      stack = newStack;
-    }
-  }
-
   public int peek() {
     int data;
     data = stack[top - 1];
     return data;
   }
 
+  public void expandArray() {
+    int length = size();
+    int newStack[] = new int[arrSize * 2];
+    System.arraycopy(stack, 0, newStack, 0, length);
+    stack = newStack;
+    arrSize += 2;
+  }
+
+  public void shrink() {
+    int length = size();
+    if ((length <= (arrSize / 2) / 2)) {
+      arrSize = arrSize / 2;
+      int newStack[] = new int[arrSize];
+      System.arraycopy(stack, 0, newStack, 0, length);
+      stack = newStack;
+    }
+  }
+
   public int size() {
-    return arraySize;
+    return arrSize;
   }
 
   public boolean isEmpty() {
@@ -67,5 +67,9 @@ public class DStack {
       System.out.print(n + " ");
     }
     System.out.println();
+  }
+
+  public boolean isFull() {
+    return size() == arrSize;
   }
 }

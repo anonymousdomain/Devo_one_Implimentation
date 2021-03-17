@@ -1,20 +1,20 @@
 public class Queue {
 
-  int arSize = 5;
+  int arrSize = 5;
   int front;
   int rear;
   int size;
   DStack obj = new DStack();
-  int queue[] = new int[arSize];
+  int queue[] = new int[arrSize];
 
   public void enqueue(int data) {
-    if (getSize() == this.arSize) {
+    if (isFull()) {
       obj.expandArray();
       queue[rear] = data;
-      rear = (rear + 1) % this.arSize;
+      rear = (rear + 1) % this.arrSize;
     } else {
       queue[rear] = data;
-      rear = (rear + 1) % this.arSize;
+      rear = (rear + 1) % this.arrSize;
     }
 
     this.size++;
@@ -24,7 +24,7 @@ public class Queue {
     int data = 0;
     if (!isEmpty()) {
       data = queue[front];
-      front = (front + 1) % this.arSize;
+      front = (front + 1) % this.arrSize;
       this.size--;
       obj.shrink();
     } else System.out.println("the Queue is empty");
@@ -34,7 +34,7 @@ public class Queue {
   public void show() {
     System.out.print("elements:");
     for (int i = 0; i < this.size; i++) {
-      System.out.print(queue[(front + i) % this.arSize] + " ");
+      System.out.print(queue[(front + i) % this.arrSize] + " ");
     }
     System.out.println();
     for (int n : queue) {
@@ -49,5 +49,9 @@ public class Queue {
 
   public boolean isEmpty() {
     return getSize() == 0;
+  }
+
+  public boolean isFull() {
+    return getSize() == this.arrSize;
   }
 }
