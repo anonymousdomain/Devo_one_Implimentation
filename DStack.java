@@ -59,6 +59,7 @@ public class DStack {
       int newStack[] = new int[arrSize];
       System.arraycopy(stack, 0, newStack, 0, length);
       stack = newStack;
+      
     }
   }
 
